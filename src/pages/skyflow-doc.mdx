@@ -1,0 +1,100 @@
+# Getting started with Skyflow
+
+# Integrating custom react components 
+
+<JobCard logo="https://images.pexels.com/photos/9130415/pexels-photo-9130415.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" roleName="designer" companyName="zemoso" location="hyderabad"/>
+
+# Integrating code blocks
+
+```javascript
+
+const App = () => {
+
+    // This is a comment!
+
+    return 'I am returning a string';
+
+}
+
+```
+
+You can use this guide to start using Skyflow?s APIs. If you?re setting up Skyflow for your team or business, check out our guide on [Role-Based Access Control](https://docs.skyflow.com/developer-portal/how-tos/how-to:-author-a-policy-and-control-access-to-your-vault/) which will help you add teammates to your account and manage their permissions. By the end of this guide, you will be able to:
+
+* Create a vault that you can use to securely store and protect your sensitive data.
+
+# Integrating the DemoApp
+
+<Iframe url="https://tokenization-demo.skyflow.app/#/creditCard" width="1000px" height="1000px" />
+
+* Create and authenticate a service account that you can use for secure API communication.
+
+<Divider/>
+
+### **Before you begin**
+
+Log in to your Skyflow account. If you don't have one, click to [request one here](https://skyflow.com/contact_sales).
+
+### **Create a vault**
+
+*Vaults* are data storage units where you can store your application?s sensitive data. Skyflow vaults come with several privacy-preserving mechanisms out of the box, such as polymorphic encryption and de-identification, built to keep your data secure. Skyflow APIs enable you to interact securely with the data.
+
+To create a vault, log into your Skyflow account and go to the Vault Templates tab in Skyflow Studio, as shown below:
+
+![image alt text](https://lh3.googleusercontent.com/NilQIH41sB99uBVLDvGQTcJafUdFVE8HAvn1jrbH81CIXWcNMJFJUFkyrNRLPPovHtM9RG-D7TgIzdB5kCcxeeImPU3tKSpkXjk3gM7H6VV7ulv8vCoEOCNVgG0AC9eiKsxu5VVdSkYn-bUsUQz13IZEPDPxB_EcMI045xRa8BTCH-_byUKst9Fvxu7JDAbx-qyCrCwk0CN4tekDB3fTQBtcBap9l-Dl2uZnUK9YPyTgb0fHxEQ3vNXuJdoz-cHt46VdVJq2vNkhAHctJdY-aNLKvePxx2Jx8AnS7e3aQrOx1VZbMINYl6dU3yqPe783pCjLlfS1WR8RgRFxOfsSsC5Sg1Vl6eO9FAJF-NDDkCZfMk5TP4L1bqjBwbpUvsxJ9Gl3Mgz_eR1Nzvywr1L5wGrCxJwZjwoBSO_rVZIp9UCWzVFvf2U3P7z4WKlyezOqkxVtlMdWRGHuX7thMp7-AeUdy7zeFjHJSm5-K2kEQUWK7MjvKrB-TK8DXmdYFw5OoH0TQQAkFXGmKLkooe3QokNazVivOFk9KCbrL5_Gw_LBH8Ts-o4B11mNMI5h-wuPZN_fooaMhQ5GVQIs_ffwBZLJjLh1XcrSLdarQZrtYtjS5tfIJiYqajhB5v-9mTG8fTEzW2GVPmxbxJqKcTOy55LClhaRQ93MkjWa_50TqqqKd1XnRhl3chqxufXK8cZ91tz_i3yWDufFbvOpNoQ3XJRY=w910-h758-no?authuser=0)
+
+*Vault Templates* define the high-level schema of the vault, including the fields and their relations. For instance, the Customer Identity vault comes packaged with all the sensitive fields a business would typically want to collect about a customer (email, phone number, and so on). Skyflow has a few predefined templates to choose from based on popular use cases.
+
+Select a template and click Create. If you have multiple workspaces, select a *Workspace* to create the vault in.
+
+Upon creating the vault, you?ll be taken to the *Vault Browser*. The Vault Browser lets you manage the data in the vault. Note, your newly created vault will be empty to start.
+
+![image alt text](https://lh3.googleusercontent.com/mbcVgDaxsPR9g4lDFEuql7rs6XA1vAprD1tydDV5KGZn16Yn-eHesEkO7kqxMO4XIAMoK6ATyTFcB8hCFAqN-W7SziSvW9d-OVcaNvHU-iE33Sc8gIT2KDxg2YMIGmtS0I3PacQ7lW_Knhx3AMCt0G496T6yeK1Xp4aG1-m1w4rFaoi9CUzpLt8vYO8LsrE7l89uCMER5VrH4wAVRq6fafuhJzbgfDzcvP8SpTZpRM43XZaD5ez88Xq_RKBqNR6OUMIdjI7VRhw_oZnwFmCcC0cm3aO2ALgUPZWqW-D1oGIG3KOtcFXHc4W-u8h5CRuE5gebRliafNshdW-r5DUVR3tgCbmZwkLczbNpXNJKmHiO2k05zGJsE4h_BBFsZMiyzpQbAp7ZfRy_Z98BxLzlMZlpHXz5mAZ8TTnEyzeNO3AFAch2fLl8ZVYsz9SwaiKVxRS0P6C7ImQbD9yFhB9fNaGFIPtzSuooHOdX1st7uKS6LxabevAjKt0bMB8M2IPZCwCrKuQ5L-IjTPNp6BAcS528mE-crN_JUQSYxb02mcCgQ_fyYI6ytYfEEn0Lxe-AHH84RwKTavgn_cAIQJd-RiT_nX5DsOX7JdUPkOhZCSV2CSGiwebIIdgeW292OP3UGQhBlgmoX82jRvwCEsTB4DLuqt-M4X38tZlDHoMH-FATqzT8nZCULcBhISEdqAg2-IwaOXeRRKSuZUVc6Xj-tQbL=w910-h758-no?authuser=0)
+
+### **Create a Service Account**
+
+*Service Accounts* provide secure channels of communication between your application and your vaults. To create an API Service Account for your vault, follow the steps below:
+
+##### **Prerequisites**
+
+* You must be a Vault Owner on a vault to create a service account
+
+* Install Python 3.5 or later.
+
+* Install PyJWT, requests and cryptography libraries
+
+##### **Step 1 : Create an API Service Account and assign a role to it.**
+
+* Navigate to the settings tab and select a vault for which you would like to create a service account from the drop down list on the left.
+
+* Select ?Service Accounts? under the IAM section, and then click on ?New Service Account?
+
+* Enter a name and description.
+
+* Assign the service account a Vault Owner role from the drop down menu and click ?Create.? You can also assign any other role instead of the Vault Owner role in this step.
+
+* Upon clicking Create, a *credentials.json* file will be downloaded to your local machine. Store this file securely as it contains a private key that will be used to sign your JWT bearer token.
+
+Here is an example of the credentials.json file:
+```json
+
+{
+
+"clientID": "client_id",
+
+"clientName": "Customer support agent web  app",
+
+"tokenURI": "token_uri",
+
+"keyID": "your_key_id",
+
+"privateKey": "private_key"
+
+* }
+
+```
+
+Note: The Workspace URL and the Vault ID mentioned in the service account page will be required as URL paths when integrating with vault APIs.
+
+# Integrating the Video
+
+<Iframe url="http://www.youtube.com/embed/xDMP3i36naA "/>
